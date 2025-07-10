@@ -1,0 +1,73 @@
+
+  <div class="main-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul class="sidebar-menu nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" onclick="loadPage('memberDashboard')">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+          </a>
+        </li>
+        
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">Member Dashboard</h1>
+        <p class="page-subtitle">View and resolve bugs assigned to you</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stats-card">
+          <div class="icon"><i class="fas fa-bug"></i></div>
+          <h2 id="MembertotalBugs">0</h2>
+          <h5>Total Bugs</h5>
+        </div>
+        <div class="stats-card">
+          <div class="icon"><i class="fas fa-exclamation-triangle"></i></div>
+          <h2 id="MemberopenBugs">0</h2>    
+          <h5>Open Bugs</h5>
+        </div>
+        <div class="stats-card">
+          <div class="icon"><i class="fas fa-check-circle"></i></div>
+          <h2 id="MemberresolvedBugs">0</h2>
+          <h5>Resolved</h5>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Assigned Bugs</h5>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-light btn-sm">All</button>
+            <button type="button" class="btn btn-outline-light btn-sm">Open</button>
+            <button type="button" class="btn btn-outline-light btn-sm">Resolved</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Lead</th>
+                  <th>Priority</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="memberBugsTableBody">
+                <tr><td colspan="5">Loading...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

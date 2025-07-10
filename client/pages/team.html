@@ -1,0 +1,79 @@
+<div class="main-layout">
+  <!-- Link styles -->
+  <link href="../assets/style.css" rel="stylesheet">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul class="sidebar-menu nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="loadPage('dashboard')">
+          <i class="fas fa-tachometer-alt"></i> Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="loadPage('submitBug')">
+          <i class="fas fa-plus-circle"></i> Submit Bug
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#" onclick="loadPage('team')">
+          <i class="fas fa-users"></i> Team
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="page-header">
+      <h1 class="page-title">Team Overview</h1>
+      <p class="page-subtitle">Track bug assignments across your team</p>
+    </header>
+
+    <!-- Project Filter -->
+    <section class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Filter by Project</h5>
+      </div>
+      <div class="card-body">
+        <div class="row align-items-end">
+          <div class="col-md-6">
+            <label for="teamProjectSelect" class="form-label">Select Project</label>
+            <select class="form-select" id="teamProjectSelect">
+              <option value="">All Projects</option>
+              <!-- JS will populate -->
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bug Assignment Table -->
+    <section class="card">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Bug Assignments</h5>
+        <span id="teamStats" class="text-muted small"></span>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>Team Member</th>
+                <th>Bug Title</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="workloadTable">
+              <tr>
+                <td colspan="3" class="text-center text-muted py-4">
+                  Loading bug assignments...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

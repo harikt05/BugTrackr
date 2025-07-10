@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./server
+    ports:
+      - "5500:5500"
+    volumes:
+      - ./server:/app
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=hari
+      - DB_NAME=bugtrackr
+
+  db:
+    image: mysql:latest
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: hari
+      MYSQL_DATABASE: bugtrackr
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:

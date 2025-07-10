@@ -1,0 +1,23 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <h1>BugTrackr</h1>
+    <h2>Sign in to your account</h2>
+    <form id="loginForm">
+      <link href="../assets/style.css" rel="stylesheet">
+      <div class="mb-3 position-relative">
+        <input type="email" class="form-control" id="email" placeholder="Email address" required>
+        <span class="position-absolute top-50 end-0 translate-middle-y pe-3 text-secondary"><i class="fas fa-envelope"></i></span>
+      </div>
+      <div class="mb-3 position-relative">
+        <input type="password" class="form-control" id="password" placeholder="Password" required>
+        <span class="position-absolute top-50 end-0 translate-middle-y pe-3 text-secondary"><i class="fas fa-lock"></i></span>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
+    <div class="auth-footer">
+      <a href="#">Forgot your password?</a>
+      <br>
+      <span>Don't have an account? <a href="#" onclick="loadPage('register')">Create an account</a></span>
+    </div>
+  </div>
+</div> 
